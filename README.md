@@ -15,7 +15,7 @@ This is a React application that fetches images from the MostBeautiful subreddit
 
 ```bash
 
-git clone https://github.com/your-username/reddit-image-viewer.git
+git clone https://github.com/Saurav458/reddit-image-viewer.git
 cd reddit-image-viewer
 npm install
 
