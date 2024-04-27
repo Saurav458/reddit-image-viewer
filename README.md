@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Reddit Image Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that fetches images from the MostBeautiful subreddit on Reddit and displays them along with their titles. The application supports pagination to navigate through multiple pages of images.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1.Fetches images from the MostBeautiful subreddit on Reddit.
+2.Displays images along with their titles on the home page.
+3.Implements pagination functionality to navigate through multiple pages of images (next and previous).
+4.Styled using Material-UI for enhanced visual appeal.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository to your local machine:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
 
-### `npm test`
+git clone https://github.com/your-username/reddit-image-viewer.git
+cd reddit-image-viewer
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the development server:
 
-### `npm run build`
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+How to Use
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.On the home page, you will see a grid of images fetched from the MostBeautiful subreddit.
+2.You can navigate between pages using the "Previous" and "Next" buttons below the grid.
+3.Each page displays up to 10 images.
+4.Clicking on the "Previous" button will take you to the previous page, and clicking on the "Next" button will take 5.5.you to the next page.
+6.If there are no more images to display (i.e., you have reached the end of the available data), the "Next" button will be disabled.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Technologies Used
 
-### `npm run eject`
+.React
+.Typescript
+.Material U.I as a library 
+.Axios
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Shimmer U.I- I've created a shimmer UI that remains visible to users until the data is fetched from the server. This enhances the user experience by providing a visually appealing loading animation while waiting for the interactive content to load on the website.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# TestCases
+I've attempted to write test cases for the RedditImage component, but the tests are failing. I'll revisit them later to troubleshoot and make the necessary corrections.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Debouncing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+In the RedditImage component, we utilize debouncing to optimize the API call triggered by the pagination functionality.I have delayed api calling by  500ms
